@@ -1,4 +1,4 @@
 # ProjetUE2
 Dumortier Dewi / Gauthier Axel / Maisano Robin
 
-Porjet Screen Saver Linux
+Projet Screen Saver Linux
