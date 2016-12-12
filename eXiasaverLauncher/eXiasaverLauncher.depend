@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1481471611 source:c:\users\robin\desktop\exiasaverlauncher\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
