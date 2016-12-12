@@ -14,3 +14,18 @@
 	<unistd.h>
 	"exiaImage.h"
 
+1481537527 source:c:\users\axlwin\desktop\systeme\projet\github\projetue2\exiasaver\exiaimage.c
+	"exiaImage.h"
+	<malloc.h>
+	<memory.h>
+	<stdio.h>
+	<stdlib.h>
+
+1481537527 c:\users\axlwin\desktop\systeme\projet\github\projetue2\exiasaver\exiaimage.h
+
+1481537527 source:c:\users\axlwin\desktop\systeme\projet\github\projetue2\exiasaver\main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	"exiaImage.h"
+
