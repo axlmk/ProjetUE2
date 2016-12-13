@@ -1,45 +1,37 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "C:\Users\axlWin\Desktop\Systeme\projet\testing\testPBM\memoireChangeTaille.h"
-
 fichierPBM initialisationTableau(fichierPBM pBM)
 {
     int i = 0;
-    pBM.tblPBM = (char**) malloc((pBM.hauteur + pBM.hauteur-3) * sizeof(char*));
+    pBM.tblPBM = malloc((pBM.hauteur) * sizeof(char*)); //le facteur de multiplication du sizeof est la solution du pauvre
     for(; i < pBM.hauteur ; i++){
-        pBM.tblPBM[i] = (char*) malloc(pBM.hauteur * sizeof(char)); //initalise le tableau a deux dimensions dynamiques
+        pBM.tblPBM[i] = malloc(pBM.largeur * sizeof(char)); //initalise le tableau a deux dimensions dynamiques
     }
-
     if (pBM.tblPBM == NULL)
     {
         printf("Erreur lors de l'allocation memoire dynamique."); //verifie qu'il n'y ait pas eu d'erreur
         exit(0);
     }
-
     for (i = 0; i < pBM.hauteur; i++)
     {
         int j = 0;
         for (; j < pBM.largeur; j++)
         {
                 pBM.tblPBM[i][j] = ' ';
-
         }
     }
-
     return pBM;
-
-    libereTableau(pBM);
 }
 
 void libereTableau(fichierPBM pBM) //libere l'allocation du tableau
 {
     free(pBM.tblPBM);
-    pBM.tblPBM = 0;
 }
 
 void testTableau(fichierPBM pBM)
 {
-    printf("\n\n\n\n");
+    printf("\n");
     int  j = 0;
     for(; j < pBM.hauteur; j++)
     {
@@ -50,11 +42,9 @@ void testTableau(fichierPBM pBM)
         }
         printf("\n");
     }
-
-    libereTableau(pBM);
 }
 
-void changeTaillePBM(fichierPBM oldPBM, int largeurX, int hauteurY)
+fichierPBM changeTaillePBM(fichierPBM oldPBM, int largeurX, int hauteurY)
 {
     int i = 0;
 
@@ -81,6 +71,7 @@ void changeTaillePBM(fichierPBM oldPBM, int largeurX, int hauteurY)
             else
             {
                 newPBM.tblPBM[0][i] = ' ';
+
             }
         }
     }
@@ -151,7 +142,7 @@ void changeTaillePBM(fichierPBM oldPBM, int largeurX, int hauteurY)
     if(oldPBM.tblPBM[3][0] == 'X')
     {
         int i = 0;
-        for(; i < hauteurY / 2; i ++){
+        for(; i < hauteurY / 2+1; i ++){
             newPBM.tblPBM[i + newPBM.hauteur / 2][0] = 'X';
         }
     }
@@ -164,7 +155,7 @@ void changeTaillePBM(fichierPBM oldPBM, int largeurX, int hauteurY)
             }
             else
             {
-                newPBM.tblPBM[i + newPBM.hauteur/2][0] = ' ';
+                newPBM.tblPBM[i + newPBM.hauteur/2+1][0] = ' ';
             }
         }
     }
@@ -173,7 +164,7 @@ void changeTaillePBM(fichierPBM oldPBM, int largeurX, int hauteurY)
     {
         int i = 0;
         for(; i < hauteurY / 2; i ++){
-            newPBM.tblPBM[i + newPBM.hauteur / 2][newPBM.largeur-1] = 'X';
+            newPBM.tblPBM[i + newPBM.hauteur / 2+1][newPBM.largeur-1] = 'X';
         }
     }
     else{
@@ -185,7 +176,7 @@ void changeTaillePBM(fichierPBM oldPBM, int largeurX, int hauteurY)
             }
             else
             {
-                newPBM.tblPBM[i + newPBM.hauteur / 2][newPBM.largeur-1] = ' ';
+                newPBM.tblPBM[i + newPBM.hauteur / 2+1][newPBM.largeur-1] = ' ';
             }
         }
     }
@@ -211,8 +202,5 @@ void changeTaillePBM(fichierPBM oldPBM, int largeurX, int hauteurY)
         }
     }
 
-    testTableau(newPBM);
-    libereTableau(newPBM); //libere bien les deux tableaux
-    libereTableau(oldPBM);
-
+    return newPBM;
 }

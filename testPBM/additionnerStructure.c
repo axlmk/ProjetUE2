@@ -5,7 +5,7 @@
 
 fichierPBM addition(fichierPBM fUN, fichierPBM fDEUX)
 {
-    d
+
     int i = 0;
     int j = 0;
     fichierPBM fFinal;

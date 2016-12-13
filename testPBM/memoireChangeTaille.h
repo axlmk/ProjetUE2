@@ -5,7 +5,7 @@
 fichierPBM initialisationTableau(fichierPBM pBM);
 void libereTableau(fichierPBM pBM);
 void testTableau(fichierPBM pBM);
-void changeTaillePBM(fichierPBM oldPBM, int largeurX, int hauteurY);
+fichierPBM changeTaillePBM(fichierPBM oldPBM, int largeurX, int hauteurY);
 
 #endif // MEMOIRECHANGETAILLE_H_INCLUDED
 
