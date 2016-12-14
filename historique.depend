@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1481741462 source:/home/fantou/Bureau/historique/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
