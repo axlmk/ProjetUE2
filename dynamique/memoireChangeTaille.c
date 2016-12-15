@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "C:\Users\axlWin\Desktop\Systeme\projet\testing\testPBM\memoireChangeTaille.h"
+#include "memoireChangeTaille.h"
+
 fichierPBM initialisationTableau(fichierPBM pBM)
 {
     int i = 0;
@@ -18,7 +19,7 @@ fichierPBM initialisationTableau(fichierPBM pBM)
         int j = 0;
         for (; j < pBM.largeur; j++)
         {
-                pBM.tblPBM[i][j] = ' ';
+                pBM.tblPBM[i][j] = ' '; //remplis tout notre tableau du caractère situé entre les ' '
         }
     }
     return pBM;
@@ -29,12 +30,21 @@ void libereTableau(fichierPBM pBM) //libere l'allocation du tableau
     free(pBM.tblPBM);
 }
 
-void testTableau(fichierPBM pBM)
+void testTableau(fichierPBM pBM, int haut, int larg)
 {
-    printf("\n");
-    int  j = 0;
+    int i;
+    for (i = 0; i < haut; i++)
+    {
+        printf("\n");
+    }
+    int j = 0;
+    int y = 0;
     for(; j < pBM.hauteur; j++)
     {
+        for (y = 0; y < larg; y++)
+        {
+            printf(" ");
+        }
         int z = 0;
         for(; z < pBM.largeur; z++)
         {
@@ -46,13 +56,35 @@ void testTableau(fichierPBM pBM)
 
 fichierPBM changeTaillePBM(fichierPBM oldPBM, int largeurX, int hauteurY)
 {
-    int i = 0;
 
     fichierPBM newPBM;
     newPBM.largeur = largeurX;
     newPBM.hauteur = hauteurY;
 
     newPBM = initialisationTableau(newPBM);
+
+    if(oldPBM.tblPBM[1][1] == 'X')
+    {
+        int i = 0;
+        int j = 0;
+        for(; i < largeurX / 2; i ++)
+        {
+
+        }
+        for(; j < hauteurY / 3 - 1;  j++)
+        {
+
+        }
+        newPBM.tblPBM[j][i] = 'X';
+
+        for(j = 0; j < ((hauteurY * 2) / 3);  j++)
+        {
+
+        }
+        newPBM.tblPBM[j][i] = 'X';
+    }
+
+
 
     if(oldPBM.tblPBM[0][1] == 'X') //regarde si un point clé de l'image est noir ou blanc
     {

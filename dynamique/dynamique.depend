@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1481808141 source:c:\users\axlwin\desktop\systeme\projet\testing\dynamique\dynamique\additionnerstructure.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"additionnerStructure.h"
+	"memoireChangeTaille.h"
+
+1481756042 c:\users\axlwin\desktop\systeme\projet\testing\dynamique\dynamique\additionnerstructure.h
+	"structureFichierPBM.h"
+
+1481551605 c:\users\axlwin\desktop\systeme\projet\testing\dynamique\dynamique\structurefichierpbm.h
+
+1481813668 c:\users\axlwin\desktop\systeme\projet\testing\dynamique\dynamique\memoirechangetaille.h
+	"structureFichierPBM.h"
+
+1481813966 source:c:\users\axlwin\desktop\systeme\projet\testing\dynamique\dynamique\memoirechangetaille.c
+	<stdlib.h>
+	<stdio.h>
+	"memoireChangeTaille.h"
+
+1481643160 c:\users\axlwin\desktop\systeme\projet\testing\testpbm\memoirechangetaille.h
+	"structureFichierPBM.h"
+
+1481551605 c:\users\axlwin\desktop\systeme\projet\testing\testpbm\structurefichierpbm.h
+
+1481813569 source:c:\users\axlwin\desktop\systeme\projet\testing\dynamique\dynamique\main.c
+	<stdio.h>
+	<stdlib.h>
+	"memoireChangeTaille.h"
+	"additionnerStructure.h"
+	<windows.h>
+	<time.h>
+

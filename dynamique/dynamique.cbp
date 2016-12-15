@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="testPBM" />
+		<Option title="dynamique" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/testPBM" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/dynamique" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/testPBM" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/dynamique" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -33,11 +33,8 @@
 		</Compiler>
 		<Unit filename="additionnerStructure.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="additionnerStructure.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="additionnerStructure.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -45,9 +42,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="memoireChangeTaille.h" />
-		<Unit filename="structureFichierPBM.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="structureFichierPBM.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
