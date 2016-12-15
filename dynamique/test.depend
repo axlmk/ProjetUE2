@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1481842376 source:/home/axl/Documents/dynamique/test/main.c
+	<stdio.h>
+	<stdlib.h>
+	"header/traitementPBM.h"
+	"header/traitementStructure.h"
+	<unistd.h>
+	<time.h>
+	<sys/ioctl.h>
+
+1481831386 /home/axl/Documents/dynamique/test/header/traitementPBM.h
+	"traitementStructure.h"
+
+1481838580 source:/home/axl/Documents/dynamique/test/traitementStructure.c
+	<stdlib.h>
+	<stdio.h>
+	"header/traitementStructure.h"
+
+1481834112 source:/home/axl/Documents/dynamique/test/traitementPBM.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"header/traitementPBM.h"
+	"header/traitementStructure.h"
+
+1481831371 /home/axl/Documents/dynamique/test/header/traitementStructure.h
+
