@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1481706876 source:/home/fantou/Bureau/exiaSaver/exiasaver.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<dirent.h>
+	"exiasaver.h"
+
+1481740939 /home/fantou/Bureau/exiaSaver/exiasaver.h
+
+1481837364 source:/home/fantou/Bureau/exiaSaver/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<dirent.h>
+	"exiasaver.h"
+	"lireecrire.h"
+	<string.h>
+
+1481832959 /home/fantou/Bureau/exiaSaver/lireecrire.h
+
+1481837538 source:/home/fantou/Bureau/exiaSaver/lireecrire.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"lireecrire.h"
+	"exiasaver.h"
+
