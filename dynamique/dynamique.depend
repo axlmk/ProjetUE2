@@ -32,3 +32,31 @@
 	<windows.h>
 	<time.h>
 
+1481808141 source:c:\users\axlwin\desktop\systeme\projet\github\projetue2\dynamique\additionnerstructure.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"additionnerStructure.h"
+	"memoireChangeTaille.h"
+
+1481756042 c:\users\axlwin\desktop\systeme\projet\github\projetue2\dynamique\additionnerstructure.h
+	"structureFichierPBM.h"
+
+1481551605 c:\users\axlwin\desktop\systeme\projet\github\projetue2\dynamique\structurefichierpbm.h
+
+1481813668 c:\users\axlwin\desktop\systeme\projet\github\projetue2\dynamique\memoirechangetaille.h
+	"structureFichierPBM.h"
+
+1481813966 source:c:\users\axlwin\desktop\systeme\projet\github\projetue2\dynamique\memoirechangetaille.c
+	<stdlib.h>
+	<stdio.h>
+	"memoireChangeTaille.h"
+
+1481822962 source:c:\users\axlwin\desktop\systeme\projet\github\projetue2\dynamique\main.c
+	<stdio.h>
+	<stdlib.h>
+	"memoireChangeTaille.h"
+	"additionnerStructure.h"
+	<windows.h>
+	<time.h>
+

@@ -105,7 +105,7 @@ fichierPBM creeStructure(int nFichier)
 
 int main(){
 
-    int x = 5, y = 9;
+    int x = 5, y = 9, n = 5;
 
     fichierPBM fHeu1;
     fichierPBM fHeu2;
@@ -115,65 +115,77 @@ int main(){
     fichierPBM fSec2;
     fichierPBM fPoint;
 
-    struct tm horaire;
-    horaire = heure();
-    int a, b, i = 0;
+    while(1){
 
-    for (a = 0; a <= horaire.tm_hour ; a+=10)
-    {
-        i++;
+        struct tm horaire;
+        horaire = heure();
+        int a, b, i = 0;
+
+        for (a = 0; a <= horaire.tm_hour ; a+=10)
+        {
+            i++;
+        }
+
+        fHeu1 = creeStructure(i - 1);
+        fHeu1 = changerStructure(fHeu1);
+        fHeu1 = changeTaillePBM(fHeu1, x, y);
+        fHeu2 = creeStructure(horaire.tm_hour - (i - 1)*10);
+        fHeu2 = changerStructure(fHeu2);
+        fHeu2 = changeTaillePBM(fHeu2, x, y);
+        fHeu1 = addition(fHeu1, fHeu2);
+
+        fPoint = creeStructure(10);
+        fPoint = changerStructure(fPoint);
+        fPoint = changeTaillePBM(fPoint, x, y);
+        fHeu1 = addition (fHeu1, fPoint);
+
+        i = 0;
+        for (a = 0; a <= horaire.tm_min ; a+=10)
+        {
+            i++;
+        }
+        fMin1 = creeStructure(i - 1);
+        fMin1 = changerStructure(fMin1);
+        fMin1 = changeTaillePBM(fMin1, x, y);
+        fMin2 = creeStructure(horaire.tm_min - (i-1)*10);
+        fMin2 = changerStructure(fMin2);
+        fMin2 = changeTaillePBM(fMin2, x, y);
+        fMin1 = addition(fMin1, fMin2);
+        fMin1 = addition(fHeu1, fMin1);
+
+        fPoint = creeStructure(10);
+        fPoint = changerStructure(fPoint);
+        fPoint = changeTaillePBM(fPoint, x, y);
+        fMin1 = addition (fMin1, fPoint);
+
+        i = 0;
+        for (a = 0; a <= horaire.tm_sec ; a+=10)
+        {
+            i++;
+        }
+        fSec1 = creeStructure(i - 1);
+        fSec1 = changerStructure(fSec1);
+        fSec1 = changeTaillePBM(fSec1, x, y);
+        fSec2 = creeStructure(horaire.tm_sec - (i-1)*10);
+        fSec2 = changerStructure(fSec2);
+        fSec2 = changeTaillePBM(fSec2, x, y);
+        fSec1 = addition(fSec1, fSec2);
+        fSec1 = addition(fMin1, fSec1);
+
+        int larg = ((80 - fSec1.largeur) / 2);
+        int haut = ((24 - fSec1.hauteur) / 2);
+
+        testTableau(fSec1, haut, larg);
+        printf("\nLe programme sera actualise dans");
+        i = 0;
+        do
+        {
+            printf(" .");
+            system("pause");
+            i++;
+        }while(i < n);
+
+
     }
-
-    fHeu1 = creeStructure(i - 1);
-    fHeu1 = changerStructure(fHeu1);
-    fHeu1 = changeTaillePBM(fHeu1, x, y);
-    fHeu2 = creeStructure(horaire.tm_hour - (i - 1)*10);
-    fHeu2 = changerStructure(fHeu2);
-    fHeu2 = changeTaillePBM(fHeu2, x, y);
-    fHeu1 = addition(fHeu1, fHeu2);
-
-    fPoint = creeStructure(10);
-    fPoint = changerStructure(fPoint);
-    fPoint = changeTaillePBM(fPoint, x, y);
-    fHeu1 = addition (fHeu1, fPoint);
-
-    i = 0;
-    for (a = 0; a <= horaire.tm_min ; a+=10)
-    {
-        i++;
-    }
-    fMin1 = creeStructure(i - 1);
-    fMin1 = changerStructure(fMin1);
-    fMin1 = changeTaillePBM(fMin1, x, y);
-    fMin2 = creeStructure(horaire.tm_min - (i-1)*10);
-    fMin2 = changerStructure(fMin2);
-    fMin2 = changeTaillePBM(fMin2, x, y);
-    fMin1 = addition(fMin1, fMin2);
-    fMin1 = addition(fHeu1, fMin1);
-
-    fPoint = creeStructure(10);
-    fPoint = changerStructure(fPoint);
-    fPoint = changeTaillePBM(fPoint, x, y);
-    fMin1 = addition (fMin1, fPoint);
-
-    i = 0;
-    for (a = 0; a <= horaire.tm_sec ; a+=10)
-    {
-        i++;
-    }
-    fSec1 = creeStructure(i - 1);
-    fSec1 = changerStructure(fSec1);
-    fSec1 = changeTaillePBM(fSec1, x, y);
-    fSec2 = creeStructure(horaire.tm_sec - (i-1)*10);
-    fSec2 = changerStructure(fSec2);
-    fSec2 = changeTaillePBM(fSec2, x, y);
-    fSec1 = addition(fSec1, fSec2);
-    fSec1 = addition(fMin1, fSec1);
-
-    int larg = ((80 - fSec1.largeur) / 2);
-    int haut = ((24 - fSec1.hauteur) / 2);
-
-    testTableau(fSec1, haut, larg);
-
     return 0;
 }
