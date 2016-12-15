@@ -49,7 +49,7 @@ void  lireFichier(ExiaImage* img, char* nomFichierPBM)                // lire le
                 typeLu = 1;
                 if(img->type != 1)
                 {
-                    printf("type du fichier %s : %d non supporté", nomFichierPBM, img->type );
+                    printf("type du fichier %s : %d non supporté!", nomFichierPBM, img->type );
                     exit(0);
                 }
             }
