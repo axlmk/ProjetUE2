@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1481505913 source:c:\users\dewid\desktop\screensav\exiasaver\exiaimage.c
+	"exiaImage.h"
+	<malloc.h>
+	<memory.h>
+	<stdio.h>
+	<stdlib.h>
+
+1481483826 c:\users\dewid\desktop\screensav\exiasaver\exiaimage.h
+
+1481501488 source:c:\users\dewid\desktop\screensav\exiasaver\main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	"exiaImage.h"
+
+1481722302 source:c:\users\axlwin\desktop\systeme\projet\github\projetue2\exiasaver\exiaimage.c
+	"exiaImage.h"
+	<malloc.h>
+	<memory.h>
+	<stdio.h>
+	<stdlib.h>
+
+1481537527 c:\users\axlwin\desktop\systeme\projet\github\projetue2\exiasaver\exiaimage.h
+
+1481537527 source:c:\users\axlwin\desktop\systeme\projet\github\projetue2\exiasaver\main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	"exiaImage.h"
+
